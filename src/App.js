@@ -27,7 +27,6 @@ class App extends Component {
     let str = this.state.mathDisplay;
     let array = str.split("")
     let mathArray = []
-
     for (let i = 0; array.length;){
       if(array[i] === "x" || array[i] === "÷" || array[i] === "+" || array[i] === "-"){
         let y = array[i]

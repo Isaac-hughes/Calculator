@@ -3,4 +3,11 @@
     height: 70px;
     margin: 2.5px;
     border-radius: 35px;
+    background-color: #2c061f;
+    color: #e1d89f;
+    font: 2em sans-serif;
+}
+
+.button:focus {
+    outline: none;
 }
