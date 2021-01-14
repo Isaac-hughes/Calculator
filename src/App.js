@@ -7,7 +7,6 @@ class App extends Component {
     mathDisplay: '',
     keys: ["7","8","9","C","4","5","6","x","1","2","3","÷","+","0","-","="]
   };
-
   buttonClick = (button) => {
     if (isNaN(parseInt(button))){
       if(button === "C"){
@@ -20,40 +19,23 @@ class App extends Component {
     } else {
       this.setState({mathDisplay: this.state.mathDisplay + button})
     }
-    
-
-
   };
-
   clearButtonClick = () => {
     this.setState({mathDisplay: ''})
   };
-  
   equateClick = () => {
-    console.log('equate clicked')
     let str = this.state.mathDisplay;
     let array = str.split("")
     let mathArray = []
 
-    for (let i = 0; array.length; i++){
-
-      console.log(`for loop started for ${array[i]}`)
-
-
-      if(isNaN(parseInt(array[i]))){
-
-        if(isNaN(parseInt(array[i++]))){
-          this.setState({mathDisplay: 'Big Ole Error'})
-        }else if (!isNaN(parseInt(array[i++]))){
-          mathArray.push(array[i])
-          array.splice(array[i], 0)
-        }
-
+    for (let i = 0; array.length;){
+      if(array[i] === "x" || array[i] === "÷" || array[i] === "+" || array[i] === "-"){
+        let y = array[i]
+        mathArray.push(y)
+        array = array.slice(y.length, array.length)
       } else if (!isNaN(parseInt(array[i]))){
-
         let holder = array[i]
         for (let j = 1; array.length; j++){
-          console.log(`second loop checking for subs num ${array[j]}`)
           if(!isNaN(parseInt(array[j]))){
             holder = holder + array[j]
           } else if (isNaN(parseInt(array[j]))){
@@ -68,9 +50,34 @@ class App extends Component {
       }
     }
     // dealing with the math array
-    console.log(mathArray)
+    let total = 0
+    let num1 = 0
+    let num2 = 0
+    let operator = ''
+    let temp = 0
+    for (let i = 0; mathArray.length > 1;){
+      num1 = parseInt(mathArray[i])
+      operator = mathArray[i + 1]
+      num2 = parseInt(mathArray[i + 2])
+      if (operator === "+"){
+        temp = num1 + num2
+      } else if (operator === "-"){
+        temp = num1 - num2
+      } else if (operator === "x"){
+        temp = num1 * num2
+      } else if (operator === "÷"){
+        temp = num1 / num2
+      } else if (num1 == null || num2 == null || operator == null || isNaN(num1) || isNaN(num2)){
+        console.log("Killed")
+        this.setState({mathDisplay: "Error"})
+        break
+      }
+      total = temp
+      mathArray.splice(0, 3)
+      mathArray.unshift(total)
+      this.setState({mathDisplay: total})
+    }
   }
-
   render(){
     return (
       <div className="App">
