@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Isaac-hughes/Calculator/static/css/main.7060efb9.chunk.css",
+    "main.js": "/Isaac-hughes/Calculator/static/js/main.1e8cc9a8.chunk.js",
+    "main.js.map": "/Isaac-hughes/Calculator/static/js/main.1e8cc9a8.chunk.js.map",
+    "runtime-main.js": "/Isaac-hughes/Calculator/static/js/runtime-main.4a1e4a58.js",
+    "runtime-main.js.map": "/Isaac-hughes/Calculator/static/js/runtime-main.4a1e4a58.js.map",
+    "static/js/2.6cfd9f09.chunk.js": "/Isaac-hughes/Calculator/static/js/2.6cfd9f09.chunk.js",
+    "static/js/2.6cfd9f09.chunk.js.map": "/Isaac-hughes/Calculator/static/js/2.6cfd9f09.chunk.js.map",
+    "static/js/3.7f469724.chunk.js": "/Isaac-hughes/Calculator/static/js/3.7f469724.chunk.js",
+    "static/js/3.7f469724.chunk.js.map": "/Isaac-hughes/Calculator/static/js/3.7f469724.chunk.js.map",
+    "index.html": "/Isaac-hughes/Calculator/index.html",
+    "static/css/main.7060efb9.chunk.css.map": "/Isaac-hughes/Calculator/static/css/main.7060efb9.chunk.css.map",
+    "static/js/2.6cfd9f09.chunk.js.LICENSE.txt": "/Isaac-hughes/Calculator/static/js/2.6cfd9f09.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a1e4a58.js",
+    "static/js/2.6cfd9f09.chunk.js",
+    "static/css/main.7060efb9.chunk.css",
+    "static/js/main.1e8cc9a8.chunk.js"
+  ]
+}
