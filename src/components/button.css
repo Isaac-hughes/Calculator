@@ -6,6 +6,7 @@
     background-color: #2c061f;
     color: #e1d89f;
     font: 2em sans-serif;
+    text-align: center;
 }
 
 .button:focus {
