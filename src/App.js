@@ -82,8 +82,8 @@ class App extends Component {
       <div className="App">
         <div className="wrapper">
           <h1 className="mathDisplay">{this.state.mathDisplay}</h1>
-          {this.state.keys.map((key) => {
-            return <Button buttonLabel={key} click={this.buttonClick}/>
+          {this.state.keys.map((key, index) => {
+            return <Button key={index} buttonLabel={key} click={this.buttonClick}/>
           })}
         </div>
       </div>
